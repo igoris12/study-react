@@ -9,3 +9,12 @@ export const subOne = () => {
         dispatch({ type: "SUB" })
     }
 }
+
+export const ASYNC = () => {
+    return (dispatch) => {
+        setTimeout(() => {
+
+            dispatch({ type: "ASYNC" })
+        }, 1000);
+    }
+}

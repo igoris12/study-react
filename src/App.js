@@ -7,15 +7,14 @@ function App() {
   const count = useSelector(state => state.count);
   const dispatch = useDispatch();
   console.log(count);
-  const { addOne, subOne } = bindActionCreators(actionCreators, dispatch)
-
+  const { addOne, subOne, ASYNC } = bindActionCreators(actionCreators, dispatch)
 
   return (
     <div className="App">
       <h1>{count}</h1>
       <button onClick={() => addOne()}>Add 1</button>
       <button onClick={() => subOne()}>Sub 1</button>
-      <button>random</button>
+      <button onClick={() => ASYNC()} >random</button>
     </div>
   );
 }
