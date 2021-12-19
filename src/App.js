@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from './redux/index';
 function App() {
+  const count = useSelector(state => state.count);
+  const dispatch = useDispatch();
+  console.log(count);
+  const { addOne, subOne } = bindActionCreators(actionCreators, dispatch)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{count}</h1>
+      <button onClick={() => addOne()}>Add 1</button>
+      <button onClick={() => subOne()}>Sub 1</button>
+      <button>random</button>
     </div>
   );
 }
