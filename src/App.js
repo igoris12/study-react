@@ -1,6 +1,8 @@
 
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import CountOneAndTwoTest from './components/CountOneAndTwoTest';
+
 import { actionCreators, actionCreators2 } from './redux/index';
 function App() {
   const count = useSelector(state => state.count);
@@ -27,6 +29,8 @@ function App() {
         <button onClick={() => subOne2()}>Sub 1</button>
         <button onClick={() => async2()} >random</button>
       </div>
+      <p>Redux testing </p>
+      <CountOneAndTwoTest />
     </div>
   );
 }
