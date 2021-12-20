@@ -2,8 +2,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import CountOneAndTwoTest from './components/CountOneAndTwoTest';
-
 import { actionCreators, actionCreators2 } from './redux/index';
+import Login from './components/Login';
+
 function App() {
   const count = useSelector(state => state.count);
   const count2 = useSelector(state => state.count2);
@@ -13,7 +14,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>count one 1:[ {count}]</h1>
+      <Login />
+      {/* <h1>count one 1:[ {count}]</h1>
       <h1>count one 2:[ {count2}]</h1>
 
       <div>
@@ -29,8 +31,9 @@ function App() {
         <button onClick={() => subOne2()}>Sub 1</button>
         <button onClick={() => async2()} >random</button>
       </div>
-      <p>Redux testing </p>
-      <CountOneAndTwoTest />
+      <p>Redux testing </p> */}
+      {/* <CountOneAndTwoTest /> */}
+
     </div>
   );
 }
