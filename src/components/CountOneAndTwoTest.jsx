@@ -1,7 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { actionCreators, actionCreators2 } from '../redux/index';
+import {
+  actionCreators,
+  actionCreators2,
+  loginActionCreators,
+} from '../redux/index';
 
 const CountOneAndTwoTest = () => {
   const state = useSelector((state) => state);
@@ -16,6 +20,8 @@ const CountOneAndTwoTest = () => {
     actionCreators2,
     pispatch
   );
+
+  const { logout } = bindActionCreators(loginActionCreators, pispatch);
 
   return (
     <div>
@@ -38,6 +44,7 @@ const CountOneAndTwoTest = () => {
           <button onClick={() => async2()}>async count 1</button>
         </div>
       </div>
+      <button onClick={() => logout()}>Logout</button>
     </div>
   );
 };
