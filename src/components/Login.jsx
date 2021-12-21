@@ -7,7 +7,6 @@ const Login = () => {
   const dispatch = useDispatch();
 
   const { login, logout } = bindActionCreators(actionCreators, dispatch);
-  console.log(loginState);
 
   return (
     <div>
