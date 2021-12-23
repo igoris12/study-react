@@ -32,4 +32,6 @@ const fetchReducer = (state = initionState, action) => {
         default:
             return state;
     }
-} 
+}
+
+export default fetchReducer;

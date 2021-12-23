@@ -6,21 +6,20 @@ import { loginActionCreators } from './redux/index';
 import Login from './components/Login';
 
 function App() {
-  const count = useSelector(state => state.count);
-  const count2 = useSelector(state => state.count2);
-  const logged = useSelector(state => state.login);
 
-  const dispatch = useDispatch();
-  const { login } = bindActionCreators(loginActionCreators, dispatch)
+  // const logged = useSelector(state => state.login);
+
+  // const dispatch = useDispatch();
+  // const { login } = bindActionCreators(loginActionCreators, dispatch)
 
 
   return (
     <div className="App">
-      <Login />
+      {/* <Login />
       {logged ? <CountOneAndTwoTest /> :
         <button onClick={() => login()}>Login</button>
-      }
-
+      } */}
+      aa
 
     </div>
   );
