@@ -12,7 +12,8 @@ function App() {
   // const dispatch = useDispatch();
   // const { login } = bindActionCreators(loginActionCreators, dispatch)
 
-
+  const data = useSelector(state => state)
+  console.log(data);
   return (
     <div className="App">
       {/* <Login />
