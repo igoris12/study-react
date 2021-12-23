@@ -1,29 +1,43 @@
 import { FETCH_DATA, FETCH_SUCCESS, FETCH_ERROR } from '../actionsType';
 
-export const FETCHING_DATA = () => {
-    return (dispatch) => {
-        dispatch({ type: FETCH_DATA })
+const fetch_data = () => {
 
-    }
-}
+    return { type: FETCH_DATA }
 
-export const FETCHING_SUCCESS = (data) => {
-    return (dispatch) => {
-        dispatch({
-            type: FETCH_SUCCESS,
-            deploy: data
-        })
-
-    }
 }
 
 
-export const FETCHING_ERROR = (data) => {
-    return (dispatch) => {
-        dispatch({
-            type: FETCH_ERROR,
-            deploy: data
-        })
+const fetching_success = (users) => {
+    return {
+        type: FETCH_SUCCESS,
+        deploy: { ...users }
+    }
 
+}
+
+
+
+const fetching_error = (error) => {
+    return {
+        type: FETCH_ERROR,
+        deploy: error
+    }
+}
+
+export const fetchData = () => {
+    return (dispatch) => {
+        dispatch(fetch_data);
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => {
+                return response.json();
+
+            }).then(
+                data => {
+                    dispatch(fetching_success(data));
+                }
+            ).catch(error => {
+                const errorMas = error.message;
+                dispatch(fetching_error(errorMas));
+            })
     }
 }
