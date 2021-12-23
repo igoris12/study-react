@@ -15,8 +15,8 @@ function App() {
   const fetchUsers = bindActionCreators(fetchData, dispatch)
   // const { login } = bindActionCreators(loginActionCreators, dispatch)
 
-  const data = useSelector(state => state)
-  console.log(data);
+  const users = useSelector(state => state.data)
+  console.log(users.data);
   return (
     <div className="App">
       {/* <Login />
@@ -24,7 +24,9 @@ function App() {
         <button onClick={() => login()}>Login</button>
       } */}
 
-      {data.loding ? 'Loding...' : <button onClick={fetchUsers}>Fetch data</button>}
+      {users.loding ? 'Loding...' : <button onClick={fetchUsers}>Fetch data</button>}
+      {users.data.map(user => console.log(1))}
+
 
     </div>
   );
