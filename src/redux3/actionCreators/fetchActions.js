@@ -10,7 +10,7 @@ const fetch_data = () => {
 const fetching_success = (users) => {
     return {
         type: FETCH_SUCCESS,
-        deploy: [users]
+        deploy: [...users]
     }
 
 }
@@ -33,6 +33,7 @@ export const fetchData = () => {
 
             }).then(
                 data => {
+
                     dispatch(fetching_success(data));
                 }
             ).catch(error => {

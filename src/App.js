@@ -5,6 +5,7 @@ import CountOneAndTwoTest from './components/CountOneAndTwoTest';
 import { loginActionCreators } from './redux/index';
 import Login from './components/Login';
 import { fetchData } from './redux3/index';
+import UserListItem from './components/UserListItem';
 
 function App() {
 
@@ -15,8 +16,9 @@ function App() {
   const fetchUsers = bindActionCreators(fetchData, dispatch)
   // const { login } = bindActionCreators(loginActionCreators, dispatch)
 
-  const users = useSelector(state => state.data)
-  console.log(users.data);
+  const data = useSelector(state => state.data)
+  console.log(data);
+  console.log(data.users);
   return (
     <div className="App">
       {/* <Login />
@@ -24,8 +26,12 @@ function App() {
         <button onClick={() => login()}>Login</button>
       } */}
 
-      {users.loding ? 'Loding...' : <button onClick={fetchUsers}>Fetch data</button>}
-      {users.data.map(user => console.log(1))}
+      {data.loding ? 'Loding...' : <button onClick={fetchUsers}>Fetch data</button>}
+      <ul>
+        <UserListItem />
+
+        {data.users.length ? data.users.map((user) => { return <div>User ID:{user.id} Username: {user.username} email: {user.email} </div> }) : null}
+      </ul>
 
 
     </div>
