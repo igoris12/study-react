@@ -1,0 +1,30 @@
+// @use 'sel' with ($black: #222, $border-radius: 0.1rem);
+
+.listItem {
+  background-color: red;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+
+  .itemID {
+    background-color: blue;
+    width: 20%;
+    height: auto;
+    border: 1px solid black;
+    padding-left: 10px;
+  }
+  .itemUsername {
+    background-color: yellow;
+    width: 40%;
+    border: 1px solid black;
+    padding-left: 10px;
+  }
+  .itemEmail {
+    background-color: green;
+    width: 40%;
+    border: 1px solid black;
+    padding-left: 10px;
+  }
+}

@@ -3,9 +3,9 @@ import React from 'react';
 const UserListItem = ({ data }) => {
   return (
     <div className="listItem">
-      <span className="itemID">ID: 1</span>{' '}
+      <span className="itemID">1</span>
       <span className="itemUsername">username</span>
-      <span className="itemEmail">Email</span>{' '}
+      <span className="itemEmail">Email</span>
     </div>
   );
 };
