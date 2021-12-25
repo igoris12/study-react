@@ -4,14 +4,14 @@ import './index.scss';
 import App from './App';
 
 import { Provider } from 'react-redux';
-// import { store } from './redux/store';
+import { store } from './redux/store';
 // import { store2 } from './redux2/store';
-import { store3 } from './redux3/store';
+// import { store3 } from './redux3/store';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store3}>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,
