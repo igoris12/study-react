@@ -5,11 +5,12 @@
   gap: 5px;
   background-color: white;
   padding: 10px;
-
-  border: 2px solid rgb(7, 40, 250);
+  border: 2px solid rgb(145, 146, 154);
+  background-color: bisque;
   border-radius: 4px;
   .listHeader {
     display: flex;
+    background-color: white;
     .idTitle {
       width: 20%;
       height: auto;
@@ -29,6 +30,7 @@
   }
 
   .listItem {
+    background-color: white;
     width: 100%;
     height: auto;
     display: flex;

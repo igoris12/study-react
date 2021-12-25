@@ -17,8 +17,7 @@ function App() {
   // const { login } = bindActionCreators(loginActionCreators, dispatch)
 
   const data = useSelector(state => state.data)
-  console.log(data);
-  console.log(data.users);
+
   return (
     <div className="App">
       {/* <Login />
@@ -31,7 +30,7 @@ function App() {
         <div className='listHeader'><span className='idTitle'>ID</span><span className='usernameTitle'>Username</span><span className='emailTitle'>Email</span></div>
 
 
-        {data.users.length ? data.users.map((user) => { return <UserListItem userData={user} /> }) : null}
+        {data.users.length ? data.users.map((user) => { return <UserListItem key={user.id} userData={user} /> }) : null}
       </ul>
 
 
