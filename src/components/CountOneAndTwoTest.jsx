@@ -24,7 +24,8 @@ const CountOneAndTwoTest = () => {
   const { logout } = bindActionCreators(loginActionCreators, pispatch);
 
   return (
-    <div>
+    <div className="counterContainer">
+      <h2>Counter with redux</h2>
       <div>
         <h1>Test one count: {state.count} </h1>
         <div>

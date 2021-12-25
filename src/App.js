@@ -1,7 +1,7 @@
 
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import CountOneAndTwoTest from './components/CountOneAndTwoTest';
+import CountOneAndTwoTest from './components/CountOneAndTwoTest';
 import { loginActionCreators } from './redux/index';
 import Login from './components/Login';
 import DataContainer from './components/DataContainer';
@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <Login />
-      {logged ? <DataContainer /> :
-        <button onClick={() => login()}>Login</button>
+      {logged ? <div> <DataContainer /> <CountOneAndTwoTest /> </div> :
+        null
       }
 
     </div>
