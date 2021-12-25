@@ -26,7 +26,7 @@ const fetching_error = (error) => {
 
 export const fetchData = () => {
     return (dispatch) => {
-        dispatch(fetch_data);
+        dispatch(fetch_data());
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => {
                 return response.json();
