@@ -1,0 +1,11 @@
+.header {
+  border: 1px solid black;
+  background-color: gainsboro;
+  margin: 10px;
+}
+
+@media (max-width: 530px) {
+  .header {
+    font-size: 10px;
+  }
+}

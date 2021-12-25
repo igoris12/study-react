@@ -9,7 +9,7 @@ const DataContainer = () => {
   const fetchUsers = bindActionCreators(fetchData, dispatch);
   return (
     <div>
-      <h2>Fetch data to redux store</h2>
+      <h2 className="header">Fetch data to redux store</h2>
       <ul className="listContainer">
         {data.loading ? (
           'Loding...'

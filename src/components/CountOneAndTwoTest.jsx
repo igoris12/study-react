@@ -52,7 +52,7 @@ const CountOneAndTwoTest = () => {
             sub 1
           </button>
           <button className="but" onClick={() => async2()}>
-            async count 1
+            async count 2
           </button>
         </div>
       </div>
