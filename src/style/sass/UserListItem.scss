@@ -6,6 +6,8 @@
   background-color: white;
   padding: 10px;
 
+  border: 2px solid rgb(7, 40, 250);
+  border-radius: 4px;
   .listHeader {
     display: flex;
     .idTitle {
@@ -38,16 +40,63 @@
       height: auto;
       border: 1px solid black;
       padding-left: 10px;
+      overflow: hidden;
     }
     .itemUsername {
       width: 40%;
       border: 1px solid black;
       padding-left: 10px;
+      overflow: hidden;
     }
     .itemEmail {
       width: 40%;
       border: 1px solid black;
       padding-left: 10px;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .listContainer {
+    .listItem {
+      .itemID {
+        font-size: smaller;
+      }
+      .itemUsername {
+        font-size: smaller;
+      }
+      .itemEmail {
+        font-size: smaller;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .listHeader {
+    .idTitle {
+      font-size: 6px;
+    }
+    .usernameTitle {
+      font-size: 6px;
+    }
+    .emailTitle {
+      font-size: 6px;
+    }
+  }
+
+  .listContainer {
+    .listItem {
+      .itemID {
+        font-size: 6px;
+      }
+      .itemUsername {
+        font-size: 6px;
+      }
+      .itemEmail {
+        font-size: 6px;
+      }
     }
   }
 }
