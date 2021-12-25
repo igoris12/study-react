@@ -1,7 +1,7 @@
 import { FETCH_DATA, FETCH_SUCCESS, FETCH_ERROR } from '../actionsType';
 
 const initionState = {
-    loding: false,
+    loading: false,
     users: [],
     error: ''
 }
@@ -10,21 +10,21 @@ const fetchReducer = (state = initionState, action) => {
     switch (action.type) {
         case FETCH_DATA:
             return {
-                loding: true,
+                loading: true,
                 users: [],
                 error: ''
             }
 
         case FETCH_SUCCESS:
             return {
-                loding: false,
+                loading: false,
                 users: [...action.deploy],
                 error: ''
             }
 
         case FETCH_ERROR:
             return {
-                loding: false,
+                loading: false,
                 users: [],
                 error: action.deploy
             }

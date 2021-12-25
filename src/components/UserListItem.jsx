@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserListItem = ({ data }) => {
+const UserListItem = ({ userData }) => {
   return (
     <div className="listItem">
       <span className="itemID">1</span>

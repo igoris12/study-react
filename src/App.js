@@ -26,11 +26,12 @@ function App() {
         <button onClick={() => login()}>Login</button>
       } */}
 
-      {data.loding ? 'Loding...' : <button onClick={fetchUsers}>Fetch data</button>}
-      <ul>
-        <UserListItem />
+      {data.loading ? 'Loding...' : <button onClick={fetchUsers}>Fetch data</button>}
+      <ul className='listContainer'>
+        <div className='listHeader'><span className='idTitle'>ID</span><span className='usernameTitle'>Username</span><span className='emailTitle'>Email</span></div>
 
-        {data.users.length ? data.users.map((user) => { return <div>User ID:{user.id} Username: {user.username} email: {user.email} </div> }) : null}
+
+        {data.users.length ? data.users.map((user) => { return <UserListItem userData={user} /> }) : null}
       </ul>
 
 
