@@ -10,7 +10,12 @@ const Login = () => {
 
   return (
     <div>
-      login {JSON.stringify(loginState)}
+      <h1>
+        {loginState
+          ? 'You are logged you can fetch data.'
+          : 'Login to fetch users.'}
+      </h1>
+      {/* login {JSON.stringify(loginState)} */}
       <div>
         {!loginState && <button onClick={() => login()}>Login</button>}
         {loginState && <button onClick={() => logout()}>Logout</button>}
