@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Login />
-      {logged ? <div> <DataContainer /> <CountOneAndTwoTest /> </div> :
+      {logged ? <div> <DataContainer />   <h2>Counter with redux</h2> <CountOneAndTwoTest /> </div> :
         null
       }
 

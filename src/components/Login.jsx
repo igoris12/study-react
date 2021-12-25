@@ -17,8 +17,16 @@ const Login = () => {
       </h1>
       {/* login {JSON.stringify(loginState)} */}
       <div>
-        {!loginState && <button onClick={() => login()}>Login</button>}
-        {loginState && <button onClick={() => logout()}>Logout</button>}
+        {!loginState && (
+          <button className="but" onClick={() => login()}>
+            Login
+          </button>
+        )}
+        {loginState && (
+          <button className="but" onClick={() => logout()}>
+            Logout
+          </button>
+        )}
       </div>
     </div>
   );

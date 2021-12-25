@@ -10,12 +10,14 @@ const DataContainer = () => {
   return (
     <div>
       <h2>Fetch data to redux store</h2>
-      {data.loading ? (
-        'Loding...'
-      ) : (
-        <button onClick={fetchUsers}>Fetch data</button>
-      )}
       <ul className="listContainer">
+        {data.loading ? (
+          'Loding...'
+        ) : (
+          <button className="but" onClick={fetchUsers}>
+            Fetch data
+          </button>
+        )}
         <div className="listHeader">
           <span className="idTitle">ID</span>
           <span className="usernameTitle">Username</span>

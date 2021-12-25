@@ -1,0 +1,17 @@
+.but {
+  background-color: rgb(62, 0, 220);
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  transition: 250ms;
+  box-shadow: 1px 1px 2px black;
+  margin: 10px;
+  max-width: 200px;
+
+  &:hover {
+    background-color: rgb(1, 1, 121);
+    box-shadow: 1px 1px 4px black;
+    transform: scale(1.2);
+  }
+}
