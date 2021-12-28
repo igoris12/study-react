@@ -15,27 +15,29 @@ const ToolkitComponet = () => {
   return (
     <div>
       <div>
-        <h1>Test one count: {count} </h1>
-        <div>
-          <h2>Count one</h2>
+        <h2>Count</h2>
+        <div className="stateContainer">
           <button
-            className="but"
+            className="butCount"
             onClick={() => {
               dispatch(increment());
             }}
           >
             +
           </button>
+          <h2>{count} </h2>
           <button
-            className="but"
+            className="butCount"
             onClick={() => {
               dispatch(decrement());
             }}
           >
             -
           </button>
+        </div>
+        <div>
           <button
-            className="but"
+            className="butCount"
             onClick={() => {
               dispatch(incrementByAmount(5));
             }}
@@ -44,7 +46,7 @@ const ToolkitComponet = () => {
           </button>
 
           <button
-            className="but"
+            className="butCount"
             onClick={() => {
               dispatch(incrementAsync(10));
             }}
