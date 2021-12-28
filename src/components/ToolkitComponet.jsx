@@ -9,7 +9,7 @@ import {
 
 const ToolkitComponet = () => {
   const count = useSelector((state) => state.counter.count);
-  console.log(count);
+
   const dispatch = useDispatch();
 
   return (

@@ -1,10 +1,11 @@
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
-import thunk from 'redux-thunk';
-import counterReducer from './features/counterSlice';
+import { configureStore } from '@reduxjs/toolkit';
 
+import counterReducer from './features/counterSlice';
+import usersReducer from './features/users/usersSlice';
 
 export default configureStore({
     reducer: {
-        counter: counterReducer
+        counter: counterReducer,
+        users: usersReducer
     }
 })
