@@ -19,7 +19,9 @@ const DataContainer = () => {
           <span className="emailTitle">Email</span>
         </div>
 
-        {users.list.length
+        {users.status == 'loading' && <h1>Loading...</h1>}
+        {users.status == 'rejected' && <h1>{users.error}</h1>}
+        {users.list && users.status == 'resolved'
           ? users.list.map((user) => {
               return <UserListItem key={user.id} userData={user} />;
             })
