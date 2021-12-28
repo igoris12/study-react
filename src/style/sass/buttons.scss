@@ -15,3 +15,17 @@
     transform: scale(1.2);
   }
 }
+
+.butCount {
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 30px;
+  color: rgb(112, 76, 182);
+  background-color: rgba(112, 76, 182, 0.1);
+  border: none;
+  border-radius: 3px;
+  margin: 10px;
+  &:hover {
+    border: 1px solid rgb(112, 76, 182);
+  }
+}

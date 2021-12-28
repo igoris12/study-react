@@ -12,11 +12,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Login />
-      {logged ? <div> <DataContainer />   <h2 className="header">Counter with redux</h2> <CountOneAndTwoTest /> </div> :
-        null
-      } */}
-
       <ToolkitComponet />
       <DataContainer />
 
