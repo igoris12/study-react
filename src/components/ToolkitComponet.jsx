@@ -4,6 +4,7 @@ import {
   increment,
   decrement,
   incrementByAmount,
+  incrementAsync,
 } from '../redux5/features/counterSlice';
 
 const ToolkitComponet = () => {
@@ -23,7 +24,7 @@ const ToolkitComponet = () => {
               dispatch(increment());
             }}
           >
-            add 1
+            +
           </button>
           <button
             className="but"
@@ -31,7 +32,7 @@ const ToolkitComponet = () => {
               dispatch(decrement());
             }}
           >
-            sub 1
+            -
           </button>
           <button
             className="but"
@@ -40,6 +41,15 @@ const ToolkitComponet = () => {
             }}
           >
             add 5
+          </button>
+
+          <button
+            className="but"
+            onClick={() => {
+              dispatch(incrementAsync(10));
+            }}
+          >
+            async
           </button>
         </div>
       </div>
