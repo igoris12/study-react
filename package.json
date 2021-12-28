@@ -1,9 +1,10 @@
 {
-    "homepage": "http://igoris12.github.io/study-react",
+  "homepage": "http://igoris12.github.io/study-react",
   "name": "study-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
