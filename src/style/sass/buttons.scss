@@ -29,3 +29,32 @@
     border: 1px solid rgb(112, 76, 182);
   }
 }
+.countInput {
+  width: 50px;
+  height: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.buttonContaner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  from {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@keyframes example {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+// animation-name: example;
+// animation-duration: 4s;

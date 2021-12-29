@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   increment,
@@ -8,9 +8,30 @@ import {
 } from '../redux5/features/counterSlice';
 
 const ToolkitComponet = () => {
+  const [amount, setAmount] = useState(2);
   const count = useSelector((state) => state.counter.count);
-
   const dispatch = useDispatch();
+
+  const amountHendler = (e) => {
+    setAmount(e);
+  };
+
+  const amountAddValidation = (value) => {
+    const newAmount = Number(value);
+    if (isNaN(newAmount)) {
+      return;
+    }
+    dispatch(incrementByAmount(newAmount));
+  };
+
+  const amountAddAsyncValidation = (value) => {
+    const newAmount = Number(value);
+    if (isNaN(newAmount)) {
+      return;
+    }
+
+    dispatch(incrementAsync(newAmount));
+  };
 
   return (
     <div>
@@ -35,11 +56,18 @@ const ToolkitComponet = () => {
             -
           </button>
         </div>
-        <div>
+        <div className="buttonContaner">
+          <input
+            type="text"
+            className="countInput"
+            value={amount}
+            onChange={(e) => amountHendler(e.target.value)}
+          />
+
           <button
             className="butCount"
             onClick={() => {
-              dispatch(incrementByAmount(5));
+              amountAddValidation(amount);
             }}
           >
             add 5
@@ -48,7 +76,7 @@ const ToolkitComponet = () => {
           <button
             className="butCount"
             onClick={() => {
-              dispatch(incrementAsync(10));
+              amountAddAsyncValidation(amount);
             }}
           >
             async

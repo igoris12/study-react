@@ -2,20 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
-
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
-// import { store } from './redux/store';
-// import { store2 } from './redux2/store';
-// import { store3 } from './redux3/store';
 import store from './redux5/store';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
