@@ -12,6 +12,27 @@ const ToolkitComponet = () => {
   const count = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
 
+  const amountHendler = (e) => {
+    setAmount(e);
+  };
+
+  const amountAddValidation = (value) => {
+    const newAmount = Number(value);
+    if (isNaN(newAmount)) {
+      return;
+    }
+    dispatch(incrementByAmount(newAmount));
+  };
+
+  const amountAddAsyncValidation = (value) => {
+    const newAmount = Number(value);
+    if (isNaN(newAmount)) {
+      return;
+    }
+
+    dispatch(incrementAsync(newAmount));
+  };
+
   return (
     <div>
       <div>
@@ -40,13 +61,13 @@ const ToolkitComponet = () => {
             type="text"
             className="countInput"
             value={amount}
-            onChange={(e) => setAmount(parseInt(e.target.value))}
+            onChange={(e) => amountHendler(e.target.value)}
           />
 
           <button
             className="butCount"
             onClick={() => {
-              dispatch(incrementByAmount(amount));
+              amountAddValidation(amount);
             }}
           >
             add 5
@@ -55,7 +76,7 @@ const ToolkitComponet = () => {
           <button
             className="butCount"
             onClick={() => {
-              dispatch(incrementAsync(amount));
+              amountAddAsyncValidation(amount);
             }}
           >
             async
