@@ -36,23 +36,27 @@ const ToolkitComponet = () => {
           </button>
         </div>
         <div>
-          <button
-            className="butCount"
-            onClick={() => {
-              dispatch(incrementByAmount(5));
-            }}
-          >
-            add 5
-          </button>
+          <form action="#" className="buttonContaner">
+            <input type="text" className="countInput" />
 
-          <button
-            className="butCount"
-            onClick={() => {
-              dispatch(incrementAsync(10));
-            }}
-          >
-            async
-          </button>
+            <button
+              className="butCount"
+              onClick={() => {
+                dispatch(incrementByAmount(5));
+              }}
+            >
+              add 5
+            </button>
+
+            <button
+              className="butCount"
+              onClick={(e) => {
+                dispatch(incrementAsync(10));
+              }}
+            >
+              async
+            </button>
+          </form>
         </div>
       </div>
     </div>

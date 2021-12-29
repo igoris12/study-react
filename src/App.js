@@ -1,19 +1,17 @@
-
-import { useSelector, useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import CountOneAndTwoTest from './components/CountOneAndTwoTest';
-import { loginActionCreators } from './redux/index'; import Login from './components/Login';
-import DataContainer from './components/DataContainer';
-import ToolkitComponet from './components/ToolkitComponet';
+import MainPage from './components/MainPage';
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  const logged = useSelector(state => state.login);
 
 
   return (
     <div className="App">
-      <ToolkitComponet />
-      <DataContainer />
+      <h1>aaa</h1>
+
+      <Routes>
+        <Route path="/study-react" element={<MainPage />} />
+
+      </Routes>
 
     </div>
   );
