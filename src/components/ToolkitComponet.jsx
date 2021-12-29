@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   increment,
@@ -8,8 +8,8 @@ import {
 } from '../redux5/features/counterSlice';
 
 const ToolkitComponet = () => {
+  const [amount, setAmount] = useState(2);
   const count = useSelector((state) => state.counter.count);
-
   const dispatch = useDispatch();
 
   return (
@@ -35,28 +35,31 @@ const ToolkitComponet = () => {
             -
           </button>
         </div>
-        <div>
-          <form action="#" className="buttonContaner">
-            <input type="text" className="countInput" />
+        <div className="buttonContaner">
+          <input
+            type="text"
+            className="countInput"
+            value={amount}
+            onChange={(e) => setAmount(parseInt(e.target.value))}
+          />
 
-            <button
-              className="butCount"
-              onClick={() => {
-                dispatch(incrementByAmount(5));
-              }}
-            >
-              add 5
-            </button>
+          <button
+            className="butCount"
+            onClick={() => {
+              dispatch(incrementByAmount(amount));
+            }}
+          >
+            add 5
+          </button>
 
-            <button
-              className="butCount"
-              onClick={(e) => {
-                dispatch(incrementAsync(10));
-              }}
-            >
-              async
-            </button>
-          </form>
+          <button
+            className="butCount"
+            onClick={() => {
+              dispatch(incrementAsync(amount));
+            }}
+          >
+            async
+          </button>
         </div>
       </div>
     </div>
