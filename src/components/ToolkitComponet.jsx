@@ -24,7 +24,11 @@ const ToolkitComponet = () => {
     dispatch(incrementByAmount(newAmount));
   };
 
-  const amountAddAsyncValidation = (value) => {
+  const amountAddAsyncValidation = (value, DOM) => {
+    DOM.target.style.animationName = 'example';
+    setTimeout(() => {
+      DOM.target.style.animationName = 'none';
+    }, 1000);
     const newAmount = Number(value);
     if (isNaN(newAmount)) {
       return;
@@ -74,9 +78,9 @@ const ToolkitComponet = () => {
           </button>
 
           <button
-            className="butCount"
-            onClick={() => {
-              amountAddAsyncValidation(amount);
+            className="butCount acync"
+            onClick={(e) => {
+              amountAddAsyncValidation(amount, e);
             }}
           >
             async
