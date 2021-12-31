@@ -1,6 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  .logo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation-name: logoAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+}
+
 .stateContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+@keyframes logoAnimation {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
 }
