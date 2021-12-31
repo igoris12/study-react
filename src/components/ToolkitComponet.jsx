@@ -74,7 +74,7 @@ const ToolkitComponet = () => {
               amountAddValidation(amount);
             }}
           >
-            add 5
+            add
           </button>
 
           <button
