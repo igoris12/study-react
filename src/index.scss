@@ -2,6 +2,8 @@
 @import './style/sass/header.scss';
 @import './style/sass/UserListItem.scss';
 @import './style/sass/Counter.scss';
+@import './style/sass/mainPage.scss';
+@import './style/sass/navBar.scss';
 
 body {
   margin: 0;
@@ -19,9 +21,6 @@ code {
 }
 
 .App {
-  background-color: rgb(243, 243, 243);
   text-align: center;
-  border: 2px solid black;
-  padding: 15px;
   height: 100%;
 }
