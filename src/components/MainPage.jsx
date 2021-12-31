@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const MainPage = () => {
   return (
     <div className="mainPage">
+      <h1>This repository where I was studying React.js + Redux.</h1>
       <h2>Projects list</h2>
       <ul>
         <Link to="/study-react/countToolkit">
