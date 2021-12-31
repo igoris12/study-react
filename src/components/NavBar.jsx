@@ -5,15 +5,9 @@ const NavBar = () => {
   return (
     <>
       <nav>
-        <Link to="/study-react">
-          <a>Home</a>
-        </Link>
-        <Link to="/study-react/countToolkit">
-          <a>Count</a>
-        </Link>
-        <Link to="/study-react/fetchData">
-          <a>Fetch data</a>
-        </Link>
+        <Link to="/study-react">Home</Link>
+        <Link to="/study-react/countToolkit">Count</Link>
+        <Link to="/study-react/fetchData">Fetch data</Link>
       </nav>
     </>
   );

@@ -1,0 +1,19 @@
+.mainPage {
+  text-align: left;
+
+  ul {
+    list-style: none;
+    a {
+      text-decoration: none;
+      li {
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: bold;
+        color: black;
+        &:hover {
+          color: rgb(150, 145, 145);
+        }
+      }
+    }
+  }
+}
