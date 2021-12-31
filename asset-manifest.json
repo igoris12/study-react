@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/study-react/static/css/main.4f092378.css",
-    "main.js": "/study-react/static/js/main.26131080.js",
+    "main.css": "/study-react/static/css/main.0cebd9c8.css",
+    "main.js": "/study-react/static/js/main.e463e9af.js",
     "index.html": "/study-react/index.html",
-    "main.4f092378.css.map": "/study-react/static/css/main.4f092378.css.map",
-    "main.26131080.js.map": "/study-react/static/js/main.26131080.js.map"
+    "main.0cebd9c8.css.map": "/study-react/static/css/main.0cebd9c8.css.map",
+    "main.e463e9af.js.map": "/study-react/static/js/main.e463e9af.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f092378.css",
-    "static/js/main.26131080.js"
+    "static/css/main.0cebd9c8.css",
+    "static/js/main.e463e9af.js"
   ]
 }
