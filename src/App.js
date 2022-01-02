@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import DataContainer from './components/DataContainer';
 import ToolkitComponet from './components/ToolkitComponet';
 import NavBar from './components/NavBar';
-import ClassContext from './components/ClassContext';
+import ClassContext from './components/ClassContext.jsx';
 
 function App() {
 
