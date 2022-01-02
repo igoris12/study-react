@@ -13,6 +13,9 @@ const MainPage = () => {
         <Link to="/study-react/fetchData">
           <li>2. Data fetching Redux + Toolkit</li>
         </Link>
+        <Link to="/study-react/contextAPI">
+          <li>3. Data Context API in class component</li>
+        </Link>
       </ul>
     </div>
   );
