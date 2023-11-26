@@ -48,8 +48,7 @@ function DataContanerStatic() {
   };
   
   const searchMatch = (event) => {
-    const usersCopy = [...data];
-    const matchedData = usersCopy.filter((user)=> {
+    const matchedData = data.filter((user)=> {
         return user.username.toLowerCase().includes(event.target.value.toLowerCase());
     })
     setUsers(matchedData);
