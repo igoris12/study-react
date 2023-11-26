@@ -9,6 +9,8 @@ const NavBar = () => {
         <Link to="/study-react/countToolkit">Count</Link>
         <Link to="/study-react/fetchData">Fetch data</Link>
         <Link to="/study-react/contextAPI">Context API</Link>
+        <Link to="/study-react/dataStudy">Data Study</Link>
+
       </nav>
     </>
   );

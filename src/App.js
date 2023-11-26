@@ -4,6 +4,7 @@ import DataContainer from './components/DataContainer';
 import ToolkitComponet from './components/ToolkitComponet';
 import NavBar from './components/NavBar';
 import ClassContext from './components/ClassContext.jsx';
+import DataContanerStatic from './components/DataStudy/DataContanerStatic.jsx';
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
         <Route path="/study-react/countToolkit" element={<ToolkitComponet />} />
         <Route path="/study-react/fetchData" element={<DataContainer />} />
         <Route path="/study-react/contextAPI" element={<ClassContext />} />
+        <Route path="/study-react/dataStudy" element={<DataContanerStatic/>} />
+
       </Routes>
 
     </div>
